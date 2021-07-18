@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  aviata_test:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+  database:
+      image: "postgres"
+      env_file:
+        - database.env
